@@ -50,13 +50,11 @@ public class PlayVideoActivity extends YouTubeBaseActivity
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
-        if(!wasRestored) {
-            mPlayer = youTubePlayer;
-            mPlayer.setPlayerStateChangeListener(this);
-            mPlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
-            mPlayer.setFullscreen(true);
-            mPlayer.loadVideo(mVideoId);
-        }
+        mPlayer = youTubePlayer;
+        mPlayer.setPlayerStateChangeListener(this);
+        mPlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
+        mPlayer.setFullscreen(true);
+        mPlayer.loadVideo(mVideoId);
     }
 
     @Override
@@ -81,7 +79,6 @@ public class PlayVideoActivity extends YouTubeBaseActivity
 
     @Override
     public void onVideoStarted() {
-
     }
 
     @Override
